@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header><img src="assets/Logo.png" alt="Logo__Alura"></header>
+    <main>
+        <section class="Seccion__Texto">
+            <div class="Seccion__Entrada">
+                <textArea class="EntradaTexto" name="Texto" id="textoEntrada" placeholder="Ingrese su texto aquí..."></textArea>
+                <div>
+                    <button class="BotonPegar" type="button" id="botonPegar">Pegar</button>
+                    <button class="BotonBorrar" type="button" id="botonBorrar">Borrar</button>
+                </div>
+
+                <section class="Botonera">
+                    <button class="BotonEncriptar" type="button" id="botonEncriptar">Encriptar</button>
+                    <button class="BotonDesencriptar" type="button" id="botonDesencriptar">Desencriptar</button>
+                </section>
+            </div>
+            <div class="Seccion__Salida">
+                <textArea class="TextoResultado" readonly name="Resultado" id="textoResultado" placeholder=""></textArea>
+
+                <div>
+                    <button class="BotonCopiar" type="button" id="botonCopiar">Copiar</button>
+                </div>
+            </div>
+        </section><br><br>
+    </main>
+    <footer class="PiePagina">
+        <p>Desarrollado por Eduardo Lopez</p>
+        <a href="https://github.com/elopez1097"><img src="assets/github.png" alt="Git_icon"></a>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

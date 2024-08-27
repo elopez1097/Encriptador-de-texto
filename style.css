@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-principal: #cdd7da;
+    --color-secundario : #121212;
+    --color-terciario : #675f4e;
+    --color-cuatario: #fafcff;
+    --fuente-montzerrat : "Montserrat", sans-serif; 
+    --fuente-krona : "Krona One", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-principal);
+}
+
+.Seccion__Texto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.Seccion__Entrada{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: left;
+    gap: 10px;
+}
+
+.EntradaTexto{
+    width: auto;
+    height: 31.25rem;
+    justify-content: start;
+    align-items: flex-start;
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    color: var(--color-secundario);
+    background-color: var(--color-cuatario);
+    border-radius: 10px;
+}
+
+.Seccion__Salida{
+    display: flex;
+    width: 20%;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.BotonPegar, .BotonBorrar, .BotonCopiar, .BotonEncriptar, .BotonDesencriptar{
+    width: 6.25rem;
+    height: 3.125rem;
+    border-radius: 10px;
+    background-color: var(--color-terciario);
+    font-family: var(--fuente-krona);
+    color: var(--color-secundario);
+}
+
+.BotonPegar:hover, .BotonBorrar:hover, .BotonCopiar:hover, .BotonEncriptar:hover, .BotonDesencriptar:hover {
+    background-color: #f8f9fa;
+}
+
+.TextoResultado{
+    color: var(--color-secundario);
+    background-color: #f8f9fa;
+    height: 39rem;
+    width: 100%;
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    background-image: url(../assets/alura.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75%; 
+}
+
+.TextoResultado:not(:placeholder-shown) {
+    background-image: none;
+}
+
+.Botonera{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 20px;
+}
+
+.BotonEncriptar, .BotonDesencriptar {
+    background-color: var(--color-cuatario);
+    font-family: var(--fuente-montzerrat);
+    font-size: larger;
+    border-radius: 24px;
+    width: 328px;
+    height: 67px;
+}
+
+.BotonEncriptar:hover, .BotonDesencriptar:hover{
+    background-color: #171b1d;
+}
+
+.PiePagina{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secundario);
+    color: var(--color-cuatario);
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--fuente-montzerrat); 
+    font-weight: 400;
+}
+
+@media(max-width: 780px){
+    .Seccion__Texto{
+        flex-direction: column;
+        width: auto;
+    }
+
+    .Seccion__Entrada{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .EntradaTexto{
+        width: auto;
+        font-size: 1rem;
+        height: 300px;
+    }
+
+    .Seccion__Salida{
+        width: 100%;
+        height: 300px;
+        font-size: 1rem;
+    }
+
+    .BotonEncriptar, .BotonDesencriptar {
+        width: auto;
+    }
+
+    .TextoResultado{
+        font-size: 1rem;
+    }
+}
